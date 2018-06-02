@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ff9800</item>
+        <item name="colorControlActivated">#ff9800</item>
+        <item name="android:textColorHint">@color/texto_secundario</item>
+
+    </style>
+
+    <style name = "SwitchCompatTheme">
+        <item name = "colorControlActivated">#ff9800</item>
+        <item name="android:textColorHint">#ff9800</item>
+
+    </style>
+
+    <style name="Theme.DoNotDim" parent="android:Theme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="NoBackGroundColor_NoTitleBar" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@null</item>
+    </style>
+</resources>

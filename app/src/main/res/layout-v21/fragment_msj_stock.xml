@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.MsjStockFrag">
+
+    <TextView
+        android:id="@+id/tv_info_msj_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="casual"
+        android:text="@string/info_frag_stock"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_msj_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_borrar_msj_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/eliminar_todo"
+        android:background="@drawable/boton_pulsado"/>
+</LinearLayout>

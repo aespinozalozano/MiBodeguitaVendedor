@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ff9800</item>
+        <item name="colorControlActivated">#ff9800</item>
+        <item name="android:textColorHint">@color/texto_secundario</item>
+    </style>
+
+    <style name = "SwitchCompatTheme">
+        <item name = "colorControlActivated">#ff9800</item>
+        <item name="android:textColorHint">#ff9800</item>
+    </style>
+
+    <style name="Theme.DoNotDim" parent="android:Theme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="NoBackGroundColor_NoTitleBar" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@null</item>
+    </style>
+</resources>

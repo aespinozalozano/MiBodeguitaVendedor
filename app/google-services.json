@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "543901778572",
+    "firebase_url": "https://bodega-virtual.firebaseio.com",
+    "project_id": "bodega-virtual",
+    "storage_bucket": "bodega-virtual.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543901778572:android:8e7330a96fb4a72b",
+        "android_client_info": {
+          "package_name": "hu.pe.thinkanddo.vendedorbodegavirtualv3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543901778572-o5in1skgdi4rkrvun7msl5b1ir3ndv2d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hu.pe.thinkanddo.vendedorbodegavirtualv3",
+            "certificate_hash": "c9526429a979eb25dd12d4131b1bae3cb55a5536"
+          }
+        },
+        {
+          "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWpUY5AxIsp7Ot5kKn_fNOFV3obLiswUY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543901778572:android:8002df40d799874e",
+        "android_client_info": {
+          "package_name": "com.thinkanddo.tiendavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543901778572-nanm0nv9tt3udc3sf350rjqm0n6k5v11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thinkanddo.tiendavirtual",
+            "certificate_hash": "c9526429a979eb25dd12d4131b1bae3cb55a5536"
+          }
+        },
+        {
+          "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWpUY5AxIsp7Ot5kKn_fNOFV3obLiswUY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543901778572:android:22907bb17e18d98d",
+        "android_client_info": {
+          "package_name": "hu.pe.thinkanddo.bodegavirtual20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543901778572-lc3a9a8ui7cihh6mr0ic0thf7071h6s8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hu.pe.thinkanddo.bodegavirtual20",
+            "certificate_hash": "c9526429a979eb25dd12d4131b1bae3cb55a5536"
+          }
+        },
+        {
+          "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWpUY5AxIsp7Ot5kKn_fNOFV3obLiswUY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543901778572-l65e9hdlhs75n3p5qg3n1kn71dcjpq3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

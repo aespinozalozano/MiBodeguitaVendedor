@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f44336"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.NoDisponibleFrag">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/icono_no_disponible"
+        app:srcCompat="@drawable/ic_no_disponible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/no_disponible_mayus"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+</LinearLayout>

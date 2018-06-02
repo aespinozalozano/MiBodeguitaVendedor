@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorAccent">#8BC34A</color>
+    <color name="colorVerde">#008000</color>
+    <color name="colorAmarillo">#F1C40F</color>
+    <color name="colorRojo">#FF5252</color>
+    <color name="colorBlanco">#ffffff</color>
+    <color name="rojo1">#F1948A</color>
+    <color name="rojo2">#EC7063</color>
+    <color name="rojo3">#E74C3C</color>
+    <color name="background_color">#E74C3C</color>
+    <color name="texto_primario">#212121</color>
+    <color name="texto_secundario">#757575</color>
+    <color name="preparando_pedido">#fff176</color>
+    <color name="pedido_enviado">#ffeb3b</color>
+    <color name="pedido_completado">#4CAF50</color>
+    <color name="pedido_anulado">#F44336</color>
+    <color name="fondo_campos">#e0e0e0</color>
+
+
+
+
+</resources>
