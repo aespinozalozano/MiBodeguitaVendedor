@@ -11,7 +11,7 @@ public class Variables {
     public static final String CAMPO_STOCK = "stock";
 
 
-    final static String CREAR_TABLA = "CREATE TABLE "+ TABLA_MENSAJES + " (" + CAMPO_ID +" integer PRIMARY KEY AUTOINCREMENT, " +  CAMPO_CATEGORIA + " text, " + CAMPO_PRODUCTO + " text, " + CAMPO_STOCK + " integer);";
+    final static String  CREAR_TABLA = "CREATE TABLE "+ TABLA_MENSAJES + " (" + CAMPO_ID +" integer PRIMARY KEY AUTOINCREMENT, " +  CAMPO_CATEGORIA + " text, " + CAMPO_PRODUCTO + " text, " + CAMPO_STOCK + " integer);";
 
     public static String TOKEN = "";
 

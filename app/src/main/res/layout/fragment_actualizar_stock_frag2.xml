@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e0e0e0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ActualizarStockFrag2">
+
+
+    <TextView
+        android:id="@+id/tvDescripProdAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gaseosa Sprite 400ml"
+        android:textColor="#7A5749"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Stock"
+                    android:background="@color/texto_primario"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/back_stock_precio">
+
+                    <EditText
+                        android:id="@+id/etStockActProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColorLink="@color/texto_primario"
+                        android:textSize="18sp"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical|end" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Unid."
+                        android:textColor="@color/texto_primario"
+                        android:paddingEnd="10dp"
+                        android:textSize="18sp"
+                        android:paddingRight="10dp"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical|start"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Precio"
+                    android:textColor="@android:color/white"
+                    android:background="@color/texto_primario"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_stock_precio">
+
+                    <EditText
+                        android:id="@+id/etPrecioActProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textSize="18sp"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:gravity="center_vertical|end"
+                        android:textAlignment="textEnd"
+                        android:inputType="numberDecimal"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Soles"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|start"
+                        android:paddingEnd="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/texto_primario"
+                        android:background="@android:color/white"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnActProd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Actualizar"
+            android:layout_weight="2"
+            android:textColor="@android:color/white"
+            android:background="#7A5749"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

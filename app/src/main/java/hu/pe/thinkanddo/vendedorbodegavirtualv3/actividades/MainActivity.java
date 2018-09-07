@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static FirebaseAuth mAuth;
-    //private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText mEmailField,mPasswordField;
     private ProgressDialog pDialog;
 
@@ -101,26 +101,30 @@ public class MainActivity extends AppCompatActivity {
 
         //Toast.makeText(this,FirebaseInstanceId.getInstance().getToken(),Toast.LENGTH_LONG).show();
 
-        /*mAuthListener = new FirebaseAuth.AuthStateListener() {
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
 
                 if(firebaseAuth.getCurrentUser()!=null){
 
+                    Intent i=new Intent(MainActivity.this,PantallaPedidos.class);
+                    //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+
                     //subirToken(firebaseAuth.getCurrentUser().getEmail(),Variables.TOKEN,"1");
-                    cambiarEstado("1",id_tienda);
+                    //cambiarEstado("1",id_tienda);
 
 
 
                 }else{
-                    cambiarEstado("0",id_tienda);
+                    //cambiarEstado("0",id_tienda);
                 }
                 //Toast.makeText(getApplicationContext(), "cambio de estado", Toast.LENGTH_SHORT).show();
                 //cambiarEstado();
 
             }
-        };*/
+        };
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

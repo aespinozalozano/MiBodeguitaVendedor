@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.Frag_buscar_productos">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_buscar_prod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progessbar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progress="25"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/colorRojo"
+            android:textSize="24sp"/>
+    </LinearLayout>
+</FrameLayout>

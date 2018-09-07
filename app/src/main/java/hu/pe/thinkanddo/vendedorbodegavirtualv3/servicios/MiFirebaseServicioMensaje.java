@@ -71,7 +71,8 @@ public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
 
 
                 showNotification(cabezera, cuerpo);
-                pedido_fcm(id_pedido, usuario, lista_ped, pagara_con, direccion, obs, hora_mensaje, telefono, id_cliente);
+                guardarEnLocal();
+                //pedido_fcm(id_pedido, usuario, lista_ped, pagara_con, direccion, obs, hora_mensaje, telefono, id_cliente);
 
             }else if(remote.getData().get("tipo_mensaje").equals("confirmar_anular")) {
 
@@ -92,6 +93,9 @@ public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
             }
         }
 
+    }
+
+    private void guardarEnLocal() {
     }
 
     private void pedido_fcm(String idpedido, String usuario, ArrayList<PedidoCompleto> lista_ped, String pagara_con, String direccion, String obs, String horaMensaje, String telefono, String idcliente){

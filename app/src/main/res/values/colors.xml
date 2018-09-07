@@ -18,6 +18,7 @@
     <color name="pedido_completado">#4CAF50</color>
     <color name="pedido_anulado">#F44336</color>
     <color name="fondo_campos">#e0e0e0</color>
+    <color name="fondo_dir_tel">#007FA8</color>
 
 
 

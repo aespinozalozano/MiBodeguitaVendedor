@@ -66,5 +66,7 @@
     <string name="youAreNotUpdatedTitle">Actualizacion disponible</string>
     <string name="youAreNotUpdatedMessage">Una nueva versión de Mi Bodeguita está disponible. Por favor, actualice a la ultima versión ahora. </string>
     <string name="update">Actualizar</string>
+    <string name="buscar">Buscar</string>
+    <string name="separador_de_productos">separador de productos</string>
 
 </resources>

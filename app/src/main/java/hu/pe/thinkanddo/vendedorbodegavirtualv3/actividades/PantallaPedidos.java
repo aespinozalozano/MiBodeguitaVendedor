@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.LayerDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ActualizarStockFrag;
+import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ActualizarStockFrag2;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ComisionFrag;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ContactoFrag;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.MsjStockFrag;
@@ -51,7 +52,7 @@ import static hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.Count.setCount
 
 
 @SuppressWarnings("ALL")
-public class PantallaPedidos extends AppCompatActivity {
+public class PantallaPedidos extends AppCompatActivity implements ActualizarStockFrag2.OnFragmentInteractionListener{
 
     private List<Pedidos> pedidosa;
     private PedidosAdapter adapter;
@@ -126,7 +127,6 @@ public class PantallaPedidos extends AppCompatActivity {
                         if (Integer.parseInt(ListObjetos.get(i).getStock()) <= 10) {
 
                             LayerDrawable icon = (LayerDrawable) menu1A.getIcon();
-
                             a=String.valueOf(i+1);
                             setCounting(PantallaPedidos.this, icon, String.valueOf(a));
                             invalidateOptionsMenu();
@@ -164,7 +164,6 @@ public class PantallaPedidos extends AppCompatActivity {
             }
         };
 
-       // Toast.makeText(this, Variables.TOKEN, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -300,13 +299,9 @@ public class PantallaPedidos extends AppCompatActivity {
 
             case R.id.actualizar_prod: {
 
-                Fragment mifragmentd = new ActualizarStockFrag();
-                if (getSupportFragmentManager().getBackStackEntryCount()>=0) {
-                    getSupportFragmentManager().beginTransaction().add(R.id.contenedor, mifragmentd, "ap").addToBackStack("act_prod").commit();
+                startActivity(new Intent(this,ActualizarProducto.class));
                     return true;
-                } else {
-                    return true;
-                }
+
             }
             case R.id.comision: {
 
@@ -427,5 +422,9 @@ public class PantallaPedidos extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onFragmentInteraction_actualizar_stock_frag(Uri uri) {
+
+    }
 }
 
