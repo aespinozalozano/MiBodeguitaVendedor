@@ -20,7 +20,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -36,7 +35,6 @@ import java.util.List;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ActualizarStockFrag2;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ComisionFrag;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.ContactoFrag;
-import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.MsjStockFrag;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.pojos.Confirmar_cancelar_pedido;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.MySingleton;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.fragments.NoDisponibleFrag;
@@ -124,7 +122,7 @@ public class PantallaPedidos extends AppCompatActivity implements ActualizarStoc
                     SQLiteDatabase db;
 
                     for(int i=0;i<ListObjetos.size();i++) {
-                        if (Integer.parseInt(ListObjetos.get(i).getStock()) <= 10) {
+                        if (Integer.parseInt(ListObjetos.get(i).getStock()) <= 2) {
 
                             LayerDrawable icon = (LayerDrawable) menu1A.getIcon();
                             a=String.valueOf(i+1);
@@ -303,6 +301,12 @@ public class PantallaPedidos extends AppCompatActivity implements ActualizarStoc
                     return true;
 
             }
+            case R.id.enviar_notificacion_clientes: {
+
+                startActivity(new Intent(this,EnviarNotificacionActivity.class));
+                return true;
+
+            }
             case R.id.comision: {
 
                 Fragment mifragmentd = new ComisionFrag();
@@ -335,7 +339,11 @@ public class PantallaPedidos extends AppCompatActivity implements ActualizarStoc
 
             case R.id.ic_group:
 
-                toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+
+                startActivity(new Intent(this, MsjeStockBajoActivity.class));
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
+                return true;
+                /*toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
                 toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -357,7 +365,7 @@ public class PantallaPedidos extends AppCompatActivity implements ActualizarStoc
                     return true;
                 } else {
                     return true;
-                }
+                }*/
 
         }
 

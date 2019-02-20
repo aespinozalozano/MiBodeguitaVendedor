@@ -17,6 +17,10 @@
         android:title="@string/actualizar_producto"
         app:showAsAction="never" />
     <item
+        android:id="@+id/enviar_notificacion_clientes"
+        android:title="@string/enviar_notificacion"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/comision"
         android:title="@string/comisiones"
         app:showAsAction="never" />

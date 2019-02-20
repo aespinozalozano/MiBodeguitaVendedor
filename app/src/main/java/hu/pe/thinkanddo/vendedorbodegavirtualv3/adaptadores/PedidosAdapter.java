@@ -32,7 +32,6 @@ import java.util.List;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.pojos.Pedidos;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.R;
 import hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.MySingleton;
-import hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.Preferences;
 
 
 public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosViewHolder> {
@@ -132,7 +131,7 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosV
         simbolos.setDecimalSeparator('.');
         final DecimalFormat df = new DecimalFormat("#.#",simbolos);
 
-        final float comision = totales*Float.valueOf(Preferences.load_comision(context));
+        final float comision = totales_con_comision-totales;
         final float ganancia_adicional = totales_con_comision-comision-totales;
 
         pedidoViewHolder.tv_total.setText(String.format("S/ %s", df.format(totales)));
@@ -289,19 +288,19 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosV
         PedidosViewHolder(View itemView){
             super(itemView);
 
-            hora_mensaje = (TextView) itemView.findViewById(R.id.fechaHora);
-            nombre =(TextView) itemView.findViewById(R.id.tv_nombre);
-            direccion = (TextView) itemView.findViewById(R.id.tv_direccion);
-            telefono = (TextView) itemView.findViewById(R.id.llamarCliente);
-            tl_pedidos=(TableLayout) itemView.findViewById(R.id.tableLayoutPedidos);
-            obs = (TextView) itemView.findViewById(R.id.observaciones);
-            estado_pedido=(TextView) itemView.findViewById(R.id.btnEstado_pedido);
-            vuelto = (TextView) itemView.findViewById(R.id.tvVuelto);
-            tv_total = (TextView)itemView.findViewById(R.id.tvTotal);
-            tv_ganancia_adicional = (TextView)itemView.findViewById(R.id.tvGananciaAdicional);
-            tv_comision = (TextView)itemView.findViewById(R.id.tvComision);
-            pagaraCon = (TextView)itemView.findViewById(R.id.tv_pagaraCon);
-            tv_total_a_pagar = (TextView)itemView.findViewById(R.id.tv_total_pagar);
+            hora_mensaje = itemView.findViewById(R.id.fechaHora);
+            nombre = itemView.findViewById(R.id.tv_nombre);
+            direccion = itemView.findViewById(R.id.tv_direccion);
+            telefono = itemView.findViewById(R.id.llamarCliente);
+            tl_pedidos= itemView.findViewById(R.id.tableLayoutPedidos);
+            obs = itemView.findViewById(R.id.observaciones);
+            estado_pedido= itemView.findViewById(R.id.btnEstado_pedido);
+            vuelto = itemView.findViewById(R.id.tvVuelto);
+            tv_total = itemView.findViewById(R.id.tvTotal);
+            tv_ganancia_adicional = itemView.findViewById(R.id.tvGananciaAdicional);
+            tv_comision = itemView.findViewById(R.id.tvComision);
+            pagaraCon = itemView.findViewById(R.id.tv_pagaraCon);
+            tv_total_a_pagar = itemView.findViewById(R.id.tv_total_pagar);
 
         }
 

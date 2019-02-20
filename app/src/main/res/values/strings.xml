@@ -68,5 +68,6 @@
     <string name="update">Actualizar</string>
     <string name="buscar">Buscar</string>
     <string name="separador_de_productos">separador de productos</string>
+    <string name="enviar_notificacion">Enviar notificacion</string>
 
 </resources>

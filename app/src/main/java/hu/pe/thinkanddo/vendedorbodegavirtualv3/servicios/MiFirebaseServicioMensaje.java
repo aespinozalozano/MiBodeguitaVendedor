@@ -72,7 +72,7 @@ public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
 
                 showNotification(cabezera, cuerpo);
                 guardarEnLocal();
-                //pedido_fcm(id_pedido, usuario, lista_ped, pagara_con, direccion, obs, hora_mensaje, telefono, id_cliente);
+                pedido_fcm(id_pedido, usuario, lista_ped, pagara_con, direccion, obs, hora_mensaje, telefono, id_cliente);
 
             }else if(remote.getData().get("tipo_mensaje").equals("confirmar_anular")) {
 
