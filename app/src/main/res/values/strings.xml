@@ -69,5 +69,17 @@
     <string name="buscar">Buscar</string>
     <string name="separador_de_productos">separador de productos</string>
     <string name="enviar_notificacion">Enviar notificacion</string>
+    <string name="cambiar_estado_pedido">CAMBIAR ESTADO</string>
+    <string name="orden">Orden:</string>
+    <string name="total1">Total</string>
+    <string name="subtotal">Subtotal :</string>
+    <string name="totalPedidoDetalle">Total :</string>
+    <string name="comisionPedidoDetalle">Comisión :</string>
+    <string name="pagar_conPedidoDetalle">Pagará con :</string>
+    <string name="vueltoPedidoDetalle">Vuelto :</string>
+    <string name="sin_mensajes_de_chat">Sin mensajes de chat</string>
+    <string name="escribe_mensaje">Escribe mensaje</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="enviar">Enviar</string>
 
 </resources>

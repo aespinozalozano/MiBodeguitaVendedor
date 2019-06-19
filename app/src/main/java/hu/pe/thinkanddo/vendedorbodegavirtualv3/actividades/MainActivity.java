@@ -31,6 +31,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -47,18 +51,17 @@ import hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.Variables;
 public class MainActivity extends AppCompatActivity {
 
 
-    public static FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText mEmailField,mPasswordField;
     private ProgressDialog pDialog;
 
-    private SwitchCompat sw_recordar_datos;
     private SharedPreferences pref;
     private String id_tienda;
     private String comision;
     private String habilitado;
     private String currentVersion;
-
+    private FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +86,10 @@ public class MainActivity extends AppCompatActivity {
         mEmailField = findViewById(R.id.et_usuario);
         mPasswordField = findViewById(R.id.et_clave);
         //progres = (ProgressBar)findViewById(R.id.progressBar2);
-        sw_recordar_datos = findViewById(R.id.sw_recordar_datos);
         final Button mLoginBtn = findViewById(R.id.btn_ingresar);
         ImageButton olvideClave = findViewById(R.id.btn_olvide_clave);
+
+        database = FirebaseDatabase.getInstance();
 
 
 
@@ -155,21 +159,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-      // mAuth.addAuthStateListener(mAuthListener);
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         //Toast.makeText(this, "OnResume", Toast.LENGTH_SHORT).show();
-        cambiarDisponibilidad(Preferences.load_id_tienda(this));
+        /*cambiarDisponibilidad(Preferences.load_id_tienda(this));
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser!=null){
             Intent i=new Intent(MainActivity.this,PantallaPedidos.class);
             //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(i);
-        }
+        }*/
 
+    }
+
+    private void cambiarDisponibilidad(String s) {
     }
 
     @Override
@@ -185,22 +192,55 @@ public class MainActivity extends AppCompatActivity {
         if(!TextUtils.isEmpty(mail) && !TextUtils.isEmpty(pass)){
             mEmailField.setText(mail);
             mPasswordField.setText(pass);
-            sw_recordar_datos.setChecked(true);
         }
     }
 
     private void LoginUsuario(final String maili, final String password, final String tokens) {
 
-        mAuth.signInWithEmailAndPassword(maili, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(maili, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
                             saveOnPreference(maili,password);
-                            subirToken(maili,tokens);
+
+                            database.getReference("condominios").addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                                        if (snapshot.child("correo").getValue().equals(maili.toLowerCase())){
+                                            if ((boolean)snapshot.child("habilitado").getValue()){
+                                                Preferences.save_id_tienda(MainActivity.this,String.valueOf(snapshot.child("id_condominio").getValue()));
+                                                Preferences.save_comision(MainActivity.this,String.valueOf(snapshot.child("comision").getValue()));
+                                                Intent i=new Intent(MainActivity.this,PantallaPedidos.class);
+                                                //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                startActivity(i);
+                                                finish();
+                                                break;
+                                            }else{
+                                                Intent in=new Intent(MainActivity.this,TiendaBloqueada.class);
+                                                //in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                startActivity(in);
+                                                finish();
+                                                break;
+                                            }
+
+                                        }else {
+                                            Toast.makeText(MainActivity.this, "El correo electrónico no esta registrado correctamente", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+
+                            //subirToken(maili,tokens);
                         }else{
-                            Toast.makeText(MainActivity.this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(MainActivity.this, "Datos incorrectos ", Toast.LENGTH_SHORT).show();
                             hidepDialog();
                         }
                     }
@@ -261,15 +301,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void saveOnPreference(String mail, String clave){
-        if(sw_recordar_datos.isChecked()){
+
             SharedPreferences.Editor editor = pref.edit();
             editor.putString("mail",mail);
             editor.putString("clave",clave);
             editor.apply();
-        }
+
     }
 
-    private  void cambiarDisponibilidad(String idTienda){
+    /*private  void cambiarDisponibilidad(String idTienda){
 
 
         HashMap<String,String> parau = new HashMap<>();
@@ -296,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
 
         MySingleton.getInstance(this).addToRequestQueue(request);
 
-    }
+    }*/
 
     private void showpDialog() {
         if (!pDialog.isShowing())

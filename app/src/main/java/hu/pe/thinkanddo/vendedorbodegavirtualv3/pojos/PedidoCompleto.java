@@ -7,16 +7,16 @@ import android.os.Parcelable;
 
 public class PedidoCompleto implements Parcelable{
 
-    private String des_larga;
+    private String desc_larg;
     private String cantidad;
     private String precio;
     private String precio_con_comision;
     private String stock;
     private String categoria;
 
-    public PedidoCompleto(String des_larga,String cantidad,String precio,String precio_con_comision,String stock,String categoria){
+    public PedidoCompleto(String desc_larg, String cantidad, String precio, String precio_con_comision, String stock, String categoria){
 
-        this.des_larga = des_larga;
+        this.desc_larg = desc_larg;
         this.cantidad = cantidad;
         this.precio = precio;
         this.precio_con_comision = precio_con_comision;
@@ -25,7 +25,7 @@ public class PedidoCompleto implements Parcelable{
     }
 
     private PedidoCompleto(Parcel in) {
-        des_larga = in.readString();
+        desc_larg = in.readString();
         cantidad = in.readString();
         precio = in.readString();
         precio_con_comision = in.readString();
@@ -55,8 +55,8 @@ public class PedidoCompleto implements Parcelable{
     }
 
 
-    public String getDes_larga() {
-        return des_larga;
+    public String getDesc_larg() {
+        return desc_larg;
     }
 
 
@@ -82,7 +82,7 @@ public class PedidoCompleto implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(des_larga);
+        dest.writeString(desc_larg);
         dest.writeString(cantidad);
         dest.writeString(precio);
         dest.writeString(precio_con_comision);

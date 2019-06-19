@@ -2,15 +2,15 @@
     <solid android:color="#ffffff"/>
 
     <stroke android:width="2dp"
-        android:color="#c47909"/>
+        android:color="#ff9800"/>
 
     <padding android:left="1dp"
         android:top="1dp"
         android:right="1dp"
         android:bottom="1dp"/>
-    <solid android:color="#c47909"/>
+    <solid android:color="#ff9800"/>
 
-    <corners android:radius="15px"/>
+    <corners android:topRightRadius="15px"/>
 
 
 </shape>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.PedidoDetalleActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fondo_datos_usuario_pedido_detalle"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:src="@drawable/ic_user_pedido_detalle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvNombreClienteEnPedidoDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:alpha="0.87"
+                android:text="Fernando Pretell"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDireccionClienteEnPedidoDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:alpha="0.54"
+                android:text="Bloque F5 dpto 507"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvHoraPedidoEnPedidoDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:alpha="0.54"
+                android:text="Hace 9 min"
+                android:textColor="@color/colorRojoPedidoDetalle"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ibLlamarEnPedidoDetalle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_call_pedido_detalle" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ibMensajeEnPedidoDetalle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_mensaje_pedido_detalle" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separadorDatosComentario"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#969696"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
+
+    <LinearLayout
+        android:id="@+id/ll_comentario_adicional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separadorDatosComentario">
+
+        <TextView
+            android:text="Comentario"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:alpha="0.87"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvComentarioPedidoDetalle"
+            android:textColor="@android:color/black"
+            android:alpha="0.54"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Por favor la gaseosa la deseo helada"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separadorComentarioProductos"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#969696"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_comentario_adicional"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pedido_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separadorComentarioProductos">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp"
+            android:background="#F3F3F3"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:text="Producto"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:layout_width="0dp"
+                android:gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+            <TextView
+                android:text="Cantidad"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Precio"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayoutPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/separadorProductosSubtotales"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#969696"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_pedido_detalle"/>
+
+    <LinearLayout
+        android:id="@+id/llSubtotales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="16dp"
+        android:background="#F3F3F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separadorProductosSubtotales">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="@string/subtotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"/>
+            <TextView
+                android:id="@+id/tvSubtotalPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:gravity="end"
+                android:text="S/ 10.50"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="@string/comisionPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"/>
+            <TextView
+                android:id="@+id/tvComisionPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:gravity="end"
+                android:text="S/ 0.50"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="@string/totalPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="@color/fondo_dir_tel"
+                android:textStyle="bold"
+                android:alpha="0.87"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"/>
+            <TextView
+                android:id="@+id/tvTotalPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/fondo_dir_tel"
+                android:textStyle="bold"
+                android:alpha="0.87"
+                android:gravity="end"
+                android:text="S/ 11.00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="@string/pagar_conPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"/>
+            <TextView
+                android:id="@+id/tvPagaraconPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:alpha="0.87"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:text="S/ 20.00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="@string/vueltoPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="@color/colorRojoPedidoDetalle"
+                android:alpha="0.87"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"/>
+            <TextView
+                android:id="@+id/tvVueltoPedidoDetalle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorRojoPedidoDetalle"
+                android:alpha="0.87"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:text="S/ 9.00"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separadorSubtotalesChat"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#969696"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSubtotales"/>
+
+
+
+    <View
+        android:id="@+id/separadorChatBotonEnviar"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#969696"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flBotonEnviarEnPedidoDetalle"/>
+
+    <FrameLayout
+        android:id="@+id/flBotonEnviarEnPedidoDetalle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <Button
+            android:id="@+id/btnEnviarEnPedidoDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/borde_redondo_fondo_verde"
+            android:text="Enviar pedido"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tvStatusPedidoEnPedidoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido finalizado"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:alpha="0.87"
+            android:visibility="visible"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/primer_negrita"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/separadorChatBotonEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSubtotales">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvChatConCliente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/tvSinMensajesPedidoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sin_mensajes_de_chat"
+            android:textColor="@android:color/black"
+            android:alpha="0.54"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

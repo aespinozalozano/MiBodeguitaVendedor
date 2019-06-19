@@ -1,62 +1,47 @@
 package hu.pe.thinkanddo.vendedorbodegavirtualv3.pojos;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class Pedidos {
+public class Pedidos implements Serializable {
 
-    private String id_pedido;
-    private String usuario;
-    private List<PedidoCompleto> pedidos_completo;
-    private String pagara_con;
+    private String idPedido;
+    private String pedidoCompleto;
+    private String pagar_con;
     private String direccion;
     private String telefono;
     private String obs;
     private String estado_pedido;
-    private String hora_mensaje;
-    private String id_cliente;
-
-    public String getId_pedido() {
-        return id_pedido;
-    }
-
-    public void setId_pedido(String id_pedido) {
-        this.id_pedido = id_pedido;
-    }
-
-    public String getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(String id_cliente) {
-        this.id_cliente = id_cliente;
-    }
+    private String idCliente;
+    private String total;
+    private String total_con_comision;
+    private long fechorcre;
+    private String usuario;
 
     public Pedidos(){}
 
-    public void setPedidos_completo(List<PedidoCompleto> pedidos_completo) {
-        this.pedidos_completo = pedidos_completo;
-    }
-
-    public List<PedidoCompleto> getPedidos_completo() {
-        return pedidos_completo;
-    }
-
-    /*public Pedidos(String usuario, String pedidos_completo, String pagara_con, String direccion, String estado_pedido) {
-        this.usuario = usuario;
-        this.pedidos_completo = pedidos_completo;
-        this.pagara_con = pagara_con;
+    public Pedidos(String idPedido, String pedidoCompleto, String pagar_con, String direccion, String telefono, String obs, String estado_pedido, String idCliente, String total, String total_con_comision, long fechorcre, String usuario) {
+        this.idPedido = idPedido;
+        this.pedidoCompleto = pedidoCompleto;
+        this.pagar_con = pagar_con;
         this.direccion = direccion;
+        this.telefono = telefono;
+        this.obs = obs;
         this.estado_pedido = estado_pedido;
-
-    }*/
-
-    public String getObs() {
-        return obs;
+        this.idCliente = idCliente;
+        this.total = total;
+        this.total_con_comision = total_con_comision;
+        this.fechorcre = fechorcre;
+        this.usuario = usuario;
     }
 
-    public void setObs(String obs) {
-        this.obs = obs;
+    public String getPedidoCompleto() {
+        return pedidoCompleto;
+    }
+
+    public void setPedidoCompleto(String pedidoCompleto) {
+        this.pedidoCompleto = pedidoCompleto;
     }
 
     public String getUsuario() {
@@ -67,14 +52,60 @@ public class Pedidos {
         this.usuario = usuario;
     }
 
-
-
-    public String getPagara_con() {
-        return pagara_con;
+    public long getFechorcre() {
+        return fechorcre;
     }
 
-    public void setPagara_con(String pagara_con) {
-        this.pagara_con = pagara_con;
+    public void setFechorcre(long fechorcre) {
+        this.fechorcre = fechorcre;
+    }
+
+    public String getIdPedido() {
+        return idPedido;
+    }
+
+    public void setIdPedido(String idPedido) {
+        this.idPedido = idPedido;
+    }
+
+    public String getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    public String getTotal_con_comision() {
+        return total_con_comision;
+    }
+
+    public void setTotal_con_comision(String total_con_comision) {
+        this.total_con_comision = total_con_comision;
+    }
+
+    public String getObs() {
+        return obs;
+    }
+
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
+
+    public String getPagar_con() {
+        return pagar_con;
+    }
+
+    public void setPagar_con(String pagar_con) {
+        this.pagar_con = pagar_con;
     }
 
     public String getDireccion() {
@@ -91,14 +122,6 @@ public class Pedidos {
 
     public void setEstado_pedido(String estado_pedido) {
         this.estado_pedido = estado_pedido;
-    }
-
-    public String getHora_mensaje() {
-        return hora_mensaje;
-    }
-
-    public void setHora_mensaje(String hora_mensaje) {
-        this.hora_mensaje = hora_mensaje;
     }
 
     public String getTelefono() {

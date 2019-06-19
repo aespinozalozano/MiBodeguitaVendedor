@@ -26,7 +26,7 @@ import hu.pe.thinkanddo.vendedorbodegavirtualv3.utilidades.Variables;
 
 public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
 
-    private ArrayList<PedidoCompleto> lista_ped= new ArrayList<>();
+    /*private ArrayList<PedidoCompleto> lista_ped= new ArrayList<>();
 
     @Override
     public void onMessageReceived(RemoteMessage remote) {
@@ -117,15 +117,15 @@ public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
         List<Pedidos> completoList = Preferences.loadArrayPedidos(getApplicationContext());
         if(completoList==null) completoList=new ArrayList<>();
         Pedidos lista = new Pedidos();
-        lista.setId_pedido(idpedido);
+        lista.setIdPedido(idpedido);
         lista.setUsuario(usuario);
-        lista.setPedidos_completo(lista_ped);
-        lista.setPagara_con(pagara_con);
+        lista.setPedidoCompleto(lista_ped);
+        lista.setPagar_con(pagara_con);
         lista.setDireccion(direccion);
         lista.setObs(obs);
         lista.setHora_mensaje(horaMensaje);
         lista.setTelefono(telefono);
-        lista.setId_cliente(idcliente);
+        lista.setIdCliente(idcliente);
         lista.setEstado_pedido("CAMBIAR ESTADO PEDIDO");
         completoList.add(lista);
         Preferences.saveArrayPedidos(this,completoList);
@@ -151,5 +151,5 @@ public class   MiFirebaseServicioMensaje extends FirebaseMessagingService {
             notificationManager.notify(0,builder.build());
         }
 
-    }
+    }*/
 }

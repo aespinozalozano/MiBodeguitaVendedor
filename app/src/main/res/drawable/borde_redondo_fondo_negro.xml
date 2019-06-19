@@ -10,7 +10,7 @@
         android:bottom="1dp"/>
     <solid android:color="@color/fondo_campos"/>
 
-    <corners android:radius="30px"/>
+    <corners android:radius="15px"/>
 
 
 </shape>

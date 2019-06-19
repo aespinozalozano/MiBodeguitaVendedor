@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".actividades.PedidoDetalleActivity"/>
         <activity
             android:name=".actividades.MainActivity"
             android:launchMode="singleTask"
@@ -27,7 +28,7 @@
             android:name=".actividades.PantallaPedidos"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
         <activity android:name=".actividades.OlvideClave" />
 
         <service
@@ -52,7 +53,7 @@
         <activity
             android:name=".actividades.MsjeStockBajoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".actividades.EnviarNotificacionActivity"/>
+        <activity android:name=".actividades.EnviarNotificacionActivity" />
     </application>
 
 </manifest>

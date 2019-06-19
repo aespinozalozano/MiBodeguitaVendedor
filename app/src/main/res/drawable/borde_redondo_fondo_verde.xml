@@ -1,14 +1,10 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <solid android:color="#ffffff"/>
-
-    <stroke android:width="2dp"
-        android:color="#c47909"/>
 
     <padding android:left="1dp"
         android:top="1dp"
         android:right="1dp"
         android:bottom="1dp"/>
-    <solid android:color="#c47909"/>
+    <solid android:color="@color/fondo_boton_enviar_en_pedido_detalle"/>
 
     <corners android:radius="15px"/>
 
